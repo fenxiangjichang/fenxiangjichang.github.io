@@ -380,9 +380,9 @@ A4：检查服务器状态，端口是否开放，重启服务，尝试切换节
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
+    <div class="panel-heading"><h5>QuantumultX 与 Shadowrocket 相比的最大区别是什么？</h5></div>
     <div class="panel-body">
-        Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
+        QuantumultX 在规则系统和自动化脚本上更灵活，支持丰富的 rewrite 与 filter 功能，而 Shadowrocket 则更轻便易用，适合普通用户快速切换节点。二者可根据使用习惯与功能需求选择。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 的脚本功能能实现哪些高级操作？</h5></div>
@@ -390,9 +390,14 @@ A4：检查服务器状态，端口是否开放，重启服务，尝试切换节
         QuantumultX 支持 JavaScript 脚本，可用于请求重写、数据修改、自动签到、广告拦截等功能。用户可通过脚本中心导入开源脚本，极大增强应用的灵活性与自动化能力。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
+    <div class="panel-heading"><h5>Mellow 支持哪些平台？</h5></div>
     <div class="panel-body">
-        可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
+        Mellow 是基于 Electron 的跨平台代理工具，支持 Windows、macOS 和 Linux。它通过 TUN 模式接管全局流量，并支持 Clash 规则和订阅格式，非常灵活。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 如何结合策略组实现智能分流？</h5></div>
@@ -405,9 +410,9 @@ A4：检查服务器状态，端口是否开放，重启服务，尝试切换节
         Clash 的自定义规则组允许用户将多个节点和策略组合，通过优先级和条件分流流量。这样可以根据网站类别或流量类型自动选择最优节点，提高网络效率和使用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 支持哪些平台？</h5></div>
+    <div class="panel-heading"><h5>Clash for Android 如何导入订阅并自动更新？</h5></div>
     <div class="panel-body">
-        Mellow 是基于 Electron 的跨平台代理工具，支持 Windows、macOS 和 Linux。它通过 TUN 模式接管全局流量，并支持 Clash 规则和订阅格式，非常灵活。<hr />    </div>
+        在 Clash for Android 的配置界面中选择“配置文件”→“新建配置”，粘贴订阅链接即可。启用自动更新功能后，软件会定期检查订阅源是否有新节点，并在后台自动替换旧配置，保持节点最新状态。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 TCP + TLS 模式适合什么场景？</h5></div>
@@ -415,14 +420,9 @@ A4：检查服务器状态，端口是否开放，重启服务，尝试切换节
         TCP + TLS 模式可模拟 HTTPS 流量，增强抗封锁能力。适合网络封锁严格的环境，通过策略组选择最佳节点，可保证访问速度和连接稳定性，尤其适用于网页浏览和视频播放。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 与 Shadowrocket 相比的最大区别是什么？</h5></div>
+    <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
     <div class="panel-body">
-        QuantumultX 在规则系统和自动化脚本上更灵活，支持丰富的 rewrite 与 filter 功能，而 Shadowrocket 则更轻便易用，适合普通用户快速切换节点。二者可根据使用习惯与功能需求选择。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash for Android 如何导入订阅并自动更新？</h5></div>
-    <div class="panel-body">
-        在 Clash for Android 的配置界面中选择“配置文件”→“新建配置”，粘贴订阅链接即可。启用自动更新功能后，软件会定期检查订阅源是否有新节点，并在后台自动替换旧配置，保持节点最新状态。<hr />    </div>
+        可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 在使用订阅时要注意什么？</h5></div>
@@ -456,16 +456,16 @@ A4：检查服务器状态，端口是否开放，重启服务，尝试切换节
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-28-clash-v2ray-ss-ssr.htm" title="分享机场 | 4月28日19M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月28日19M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-11-clash-windows.htm" title="分享机场 | 4月11日20M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月11日20M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-21-free-shadowrocket-node.htm" title="分享机场 | 4月21日22.8M/S|免费Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月21日22.8M/S|免费Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-24-free-clash.htm" title="分享机场 | 4月24日21M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月24日21M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-25-clash-v2ray-ss-ssr.htm" title="分享机场 | 4月25日19.3M/S|免费Clash节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月25日19.3M/S|免费Clash节点/Trojan节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-19-free-v2ray-subscribe.htm" title="分享机场 | 4月19日22.7M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月19日22.7M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-15-node-share.htm" title="分享机场 | 4月15日21.6M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月15日21.6M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-13-free-ssr-subscribe.htm" title="分享机场 | 4月13日18.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月13日18.3M/S|免费Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-29-free-clash.htm" title="分享机场 | 4月29日21.8M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月29日21.8M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-22-clash-v2ray-ss-ssr.htm" title="分享机场 | 4月22日19.9M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月22日19.9M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-5-clash-windows.htm" title="分享机场 | 5月5日22.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 5月5日22.1M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-23-clash-windows.htm" title="分享机场 | 4月23日21.4M/S|免费Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月23日21.4M/S|免费Shadowrocket节点/Trojan节点/Clash节点/Singbox节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-free-high-speed-nodes.htm" title="分享机场 | 5月7日20.9M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 5月7日20.9M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-27-clash-v2ray-ss-ssr.htm" title="分享机场 | 4月27日21.7M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月27日21.7M/S|免费Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-19-free-v2ray-subscribe.htm" title="分享机场 | 4月19日22.7M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月19日22.7M/S|免费Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-12-free-clash.htm" title="分享机场 | 4月12日18.1M/S|免费Shadowrocket节点/Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 4月12日18.1M/S|免费Shadowrocket节点/Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-6-clash-v2ray-ss-ssr.htm" title="分享机场 | 5月6日22.5M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 5月6日22.5M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-2-clash-node.htm" title="分享机场 | 5月2日19.6M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 5月2日19.6M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-4-free-clash.htm" title="分享机场 | 5月4日19.4M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">分享机场 | 5月4日19.4M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -477,10 +477,10 @@ A4：检查服务器状态，端口是否开放，重启服务，尝试切换节
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
